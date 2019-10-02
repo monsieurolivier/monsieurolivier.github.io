@@ -34,6 +34,8 @@ header {
     position: relative;
 
     background: rgb(var(--background-color));
+
+    
 }
 
 #main-logo {
@@ -44,9 +46,10 @@ header {
     transform: translate(-50%, -50%);
 
     font-size: 3.5em;
+    text-align: center;
 }
 
-#main-logo .monsieur {
+#main-logo .logo-monsieur {
     color: rgb(var(--main-typo-color));
 
     transition: color 0.2s;
@@ -56,7 +59,11 @@ header {
     color: rgb(var(--main-color));
 }*/
 
-#main-logo .olivier {
+#main-logo .logo-o {
+    color: rgb(var(--main-color));
+}
+
+#main-logo .logo-olivier {
     color: rgb(var(--main-color));
     background: rgb(var(--main-typo-color));
     border-radius: 20%/50%;
@@ -65,12 +72,9 @@ header {
     transition: color 0.2s, background-color 0.4s;
 }
 
-#main-logo:hover .olivier {
+#main-logo:hover .logo-olivier {
     color: rgb(var(--main-typo-color));
     background: rgb(var(--main-color));
-}
-
-main {
 }
 
 .section {
