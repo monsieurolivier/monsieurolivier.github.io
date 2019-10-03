@@ -87,8 +87,8 @@ header {
 
     position: relative;
 
-    min-height: var(--section-height);
     height: auto;
+    min-height: var(--section-height);
     margin: 0;
 }
 
@@ -101,6 +101,7 @@ header {
     padding: 20px;
 
     text-align: center;
+    line-height: 2em;
 }
 
 .bio::before {
@@ -124,7 +125,7 @@ header {
     background-size: cover;
 }
 
-.section2 {
+.jr-dev {
     background: rgb(var(--accent-color));
 }
 
@@ -132,3 +133,8 @@ header {
     background: rgb(var(--background-color));
 }
 
+footer.section {
+    background: rgb(var(--secondary-color));
+
+    min-height: unset;
+}
