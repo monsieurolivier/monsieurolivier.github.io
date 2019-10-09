@@ -9,6 +9,7 @@
     --main-typo-color: 250, 250, 255; 
 
     --section-height: 500px;
+    --section-header-height: 115px;
 }
 
 * {
@@ -26,6 +27,12 @@ body {
     color: rgb(var(--main-typo-color));
 }
 
+#main-container {
+    height: 100vh;
+    perspective: 5px;
+    overflow-y: auto;
+}
+
 a, a:hover, a:focus, a:visited {
     color: rgb(var(--main-color));
     background: rgb(var(--main-typo-color));
@@ -41,20 +48,21 @@ a, a:hover, a:focus, a:visited {
 }
 
 header {
-    position: relative;
-
     background: rgb(var(--background-color));
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 100;
 }
 
 #main-logo {
     display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
 
     font-size: 3.5em;
     text-align: center;
+    vertical-align: bottom;
 }
 
 #main-logo .logo-monsieur {
@@ -81,27 +89,25 @@ header {
     background: rgb(var(--main-color));
 }
 
-.section {
+main {
+    margin-top: var(--section-header-height);
+}
+
+.section, .header-section {
     display: flex;
     align-items: center;
 
-    position: relative;
-
-    height: auto;
-    min-height: var(--section-height);
     margin: 0;
 }
 
-.section-content {
-    min-width : 768px;
-    width: 90%;
-    max-width: 1200px;
+.header-section {
+    height: var(--section-header-height);
+}
 
-    margin: 0 auto;
-    padding: 20px;
+.section {
+    position: relative;
 
-    text-align: center;
-    line-height: 2em;
+    min-height: var(--section-height);
 }
 
 .bio::before {
@@ -109,6 +115,7 @@ header {
     position: absolute;
     z-index: -2;
     top: 0; left: 0;
+    transform: translateZ(-1px) scale(1.5);
     width: 100%; height: 100%;
     background: url('images/markus-spiske-qjnAnF0jIGk-unsplash.jpg');
     background-size: cover;
@@ -123,6 +130,18 @@ header {
     width: 100%; height: 100%;
     background: linear-gradient(rgba(var(--main-color), 0.8), rgba(var(--main-color), 0.8));
     background-size: cover;
+}
+
+.section-content {
+    min-width : 768px;
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    text-align: center;
+    line-height: 2em;
 }
 
 .jr-dev {
