@@ -49,7 +49,7 @@ a, a:hover, a:focus, a:visited {
 
 header {
     background: rgb(var(--background-color));
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 
@@ -87,10 +87,6 @@ header {
 #main-logo:hover .logo-olivier {
     color: rgb(var(--main-typo-color));
     background: rgb(var(--main-color));
-}
-
-main {
-    margin-top: var(--section-header-height);
 }
 
 .section, .header-section {
